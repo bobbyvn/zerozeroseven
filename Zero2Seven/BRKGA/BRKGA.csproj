@@ -49,6 +49,16 @@
     <Compile Include="Exception\ReinsertionException.cs" />
     <Compile Include="GA\ChromosomeBase.cs" />
     <Compile Include="GA\CrossoverBase.cs" />
+    <Compile Include="GA\Crossovers\CutAndSpliceCrossover.cs" />
+    <Compile Include="GA\Crossovers\CycleCrossover.cs" />
+    <Compile Include="GA\Crossovers\OnePointCrossover.cs" />
+    <Compile Include="GA\Crossovers\OrderBasedCrossover.cs" />
+    <Compile Include="GA\Crossovers\OrderedCrossover.cs" />
+    <Compile Include="GA\Crossovers\PartiallyMappedCrossover.cs" />
+    <Compile Include="GA\Crossovers\PositionBasedCrossover.cs" />
+    <Compile Include="GA\Crossovers\ThreeParentCrossover.cs" />
+    <Compile Include="GA\Crossovers\TwoPointCrossover.cs" />
+    <Compile Include="GA\Crossovers\UniformCrossover.cs" />
     <Compile Include="GA\GeneticAlgorithmBase.cs" />
     <Compile Include="GA\MutationBase.cs" />
     <Compile Include="GA\PerformanceGenerationStrategy.cs" />
@@ -61,6 +71,7 @@
     <Compile Include="Helper\ChromosomeHelper.cs" />
     <Compile Include="Helper\EmptySpaceHelper.cs" />
     <Compile Include="Helper\PlacementHelper.cs" />
+    <Compile Include="Helper\RandomizationHelper.cs" />
     <Compile Include="Helper\SortHelper.cs" />
     <Compile Include="Interface\IChromosome.cs" />
     <Compile Include="Interface\IChromosomeOperator.cs" />
