@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BRKGA.Interface
 {
@@ -10,6 +6,6 @@ namespace BRKGA.Interface
     {
         int ParentsNumber { get; }
         int ChildrenNumber { get; }
-        List<IChromosome<T>> Cross(IList<IChromosome<T>> parents);
+        IList<IChromosome<T>> Cross(IList<IChromosome<T>> parents);
     }
 }

@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HelperSharp, Version=1.0.5560.27038, Culture=neutral, PublicKeyToken=3d44152485e1a4e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\HelperSharp.0.0.4.2\lib\net35\HelperSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exception\CrossoverException.cs" />
+    <Compile Include="Exception\FitnessException.cs" />
+    <Compile Include="Exception\ReinsertionException.cs" />
+    <Compile Include="GA\ChromosomeBase.cs" />
+    <Compile Include="GA\CrossoverBase.cs" />
+    <Compile Include="GA\GeneticAlgorithmBase.cs" />
+    <Compile Include="GA\MutationBase.cs" />
+    <Compile Include="GA\PerformanceGenerationStrategy.cs" />
+    <Compile Include="GA\Population.cs" />
+    <Compile Include="GA\RandomizationBase.cs" />
+    <Compile Include="GA\ReinsertionBase.cs" />
+    <Compile Include="GA\SelectionBase.cs" />
+    <Compile Include="GA\TaskExecutorBase.cs" />
+    <Compile Include="GA\TerminationBase.cs" />
+    <Compile Include="Helper\ChromosomeHelper.cs" />
     <Compile Include="Helper\EmptySpaceHelper.cs" />
     <Compile Include="Helper\PlacementHelper.cs" />
     <Compile Include="Helper\SortHelper.cs" />
@@ -47,17 +66,23 @@
     <Compile Include="Interface\IChromosomeOperator.cs" />
     <Compile Include="Interface\ICrossover.cs" />
     <Compile Include="Interface\IFitness.cs" />
+    <Compile Include="Interface\IGenerationStrategy.cs" />
     <Compile Include="Interface\IGeneticAlgorithm.cs" />
     <Compile Include="Interface\IMutation.cs" />
     <Compile Include="Interface\IPopulation.cs" />
     <Compile Include="Interface\IRandomization.cs" />
     <Compile Include="Interface\IReinsertion.cs" />
     <Compile Include="Interface\ISelection.cs" />
+    <Compile Include="Interface\ITaskExecutor.cs" />
     <Compile Include="Interface\ITermination.cs" />
     <Compile Include="Model\Box.cs" />
     <Compile Include="Model\EmptySpace.cs" />
+    <Compile Include="Model\Enum\GeneticAlgorithmState.cs" />
     <Compile Include="Model\Generation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
