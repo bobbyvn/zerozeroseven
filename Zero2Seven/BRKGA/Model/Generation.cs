@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using BRKGA.Interface;
+using HelperSharp;
 
 namespace BRKGA.Model
 {
@@ -11,9 +12,9 @@ namespace BRKGA.Model
         {
             if (number < 1)
             {
-                //throw new ArgumentOutOfRangeException(
-                //    "number",
-                //    "Generation number {0} is invalid. Generation number should be positive and start in 1.".With(number));
+                throw new ArgumentOutOfRangeException(
+                    "number",
+                    "Generation number {0} is invalid. Generation number should be positive and start in 1.".With(number));
             }
 
             if (chromosomes == null || chromosomes.Count < 2)

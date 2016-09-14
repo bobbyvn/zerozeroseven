@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Exception\CrossoverException.cs" />
     <Compile Include="Exception\FitnessException.cs" />
+    <Compile Include="Exception\MutationException.cs" />
     <Compile Include="Exception\ReinsertionException.cs" />
+    <Compile Include="Exception\SelectionException.cs" />
     <Compile Include="GA\ChromosomeBase.cs" />
     <Compile Include="GA\CrossoverBase.cs" />
     <Compile Include="GA\Crossovers\CutAndSpliceCrossover.cs" />
@@ -61,15 +63,36 @@
     <Compile Include="GA\Crossovers\UniformCrossover.cs" />
     <Compile Include="GA\GeneticAlgorithmBase.cs" />
     <Compile Include="GA\MutationBase.cs" />
+    <Compile Include="GA\Mutations\ReverseSequenceMutation.cs" />
+    <Compile Include="GA\Mutations\TworsMutation.cs" />
+    <Compile Include="GA\Mutations\UniformMutation.cs" />
     <Compile Include="GA\PerformanceGenerationStrategy.cs" />
     <Compile Include="GA\Population.cs" />
     <Compile Include="GA\RandomizationBase.cs" />
+    <Compile Include="GA\Randomizations\BasicRandomization.cs" />
+    <Compile Include="GA\Randomizations\FastRandomRandomization.cs" />
     <Compile Include="GA\ReinsertionBase.cs" />
+    <Compile Include="GA\Reinsertions\ElitistReinsertion.cs" />
+    <Compile Include="GA\Reinsertions\FitnessBasedReinsertion.cs" />
+    <Compile Include="GA\Reinsertions\PureReinsertion.cs" />
+    <Compile Include="GA\Reinsertions\UniformReinsertion.cs" />
     <Compile Include="GA\SelectionBase.cs" />
+    <Compile Include="GA\Selections\EliteSelection.cs" />
+    <Compile Include="GA\Selections\RouletteWheelSelection.cs" />
+    <Compile Include="GA\Selections\StochasticUniversalSamplingSelection.cs" />
+    <Compile Include="GA\Selections\TournamentSelection.cs" />
     <Compile Include="GA\TaskExecutorBase.cs" />
     <Compile Include="GA\TerminationBase.cs" />
+    <Compile Include="GA\Terminations\AndTermination.cs" />
+    <Compile Include="GA\Terminations\FitnessStagnationTermination.cs" />
+    <Compile Include="GA\Terminations\FitnessThresholdTermination.cs" />
+    <Compile Include="GA\Terminations\GenerationNumberTermination.cs" />
+    <Compile Include="GA\Terminations\LogicalOperatorTerminationBase.cs" />
+    <Compile Include="GA\Terminations\OrTermination.cs" />
+    <Compile Include="GA\Terminations\TimeEvolvingTermination.cs" />
     <Compile Include="Helper\ChromosomeHelper.cs" />
     <Compile Include="Helper\EmptySpaceHelper.cs" />
+    <Compile Include="Helper\FastRandomHelper.cs" />
     <Compile Include="Helper\PlacementHelper.cs" />
     <Compile Include="Helper\RandomizationHelper.cs" />
     <Compile Include="Helper\SortHelper.cs" />
@@ -95,6 +118,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
